@@ -15,7 +15,7 @@ class Brains
   end
 
   def input(array)
-    @generation += 1gs
+    @generation += 1
     @cortex[:input].each_with_index do |neuron, i|
       neuron.activation = array[i]
     end
