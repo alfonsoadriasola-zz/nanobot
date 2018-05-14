@@ -17,9 +17,9 @@ class Brains
     @cortex[:input].each_with_index do |neuron, i|
       neuron.activation = array[i]
     end
-    @cortex[:hidden1].each{|neuron| neuron.fire(@cortex)}
-    @cortex[:hidden2].each{|neuron| neuron.fire(@cortex)}
-    @cortex[:output].each{|neuron| neuron.fire(@cortex)}
+    @cortex[:hidden1].each { |neuron| neuron.fire(@cortex) }
+    @cortex[:hidden2].each { |neuron| neuron.fire(@cortex) }
+    @cortex[:output].each { |neuron| neuron.fire(@cortex) }
   end
 
   def output(); end
