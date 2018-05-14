@@ -22,7 +22,9 @@ class Brains
     @cortex[:output].each { |neuron| neuron.fire(@cortex) }
   end
 
-  def output(); end
+  def output()
+    @cortex[:output].map { |neuron| neuron.fire(@cortex) }
+  end
 end
 
 class Neuron
