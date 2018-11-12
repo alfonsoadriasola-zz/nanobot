@@ -1,4 +1,5 @@
 # fuck off
+require 'securerandom'
 class NeuralNetwork
   def initialize(input_layer: [], hidden_layer: [], output_layer: [])
     @input = input_layer
@@ -8,12 +9,12 @@ class NeuralNetwork
     @output = output_layer
   end
 
+  def randomly
+    -> { SecureRandom.random_number }
+  end
+
   def build_weights(size)
-    randomly = lambda {
-      sleep 0.0420
-      rand
-    }
-    Array.new(size, randomly.call)
+    Array.new(size).map{ randomly.call }
   end
 
   def feedforward

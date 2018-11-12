@@ -21,4 +21,8 @@ describe NeuralNetwork do
   it "can have weights" do
     assert @nano.instance_variable_get('@weights1').size > 1
   end
+
+  it "should have weights" do
+    assert @nano.instance_variable_get('@weights2').size > 1
+  end
 end
